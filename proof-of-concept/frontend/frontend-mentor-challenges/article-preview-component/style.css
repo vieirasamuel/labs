@@ -180,6 +180,25 @@ body {
   bottom: -20px;
 }
 
+@media only screen and (max-width: 767px) {
+  #share-modal {
+    width: 90vw;
+    height: 90px;
+    margin-left: 5%;
+    bottom: 5%;
+    left: 0;
+    position: absolute;
+  }
+
+  #share-modal::before {
+    width: 0px;
+    height: 0px;
+    border: none;
+    left: 0;
+    bottom: 0;
+  }
+}
+
 .share-wrapper {
   width: 75%;
   height: inherit;
