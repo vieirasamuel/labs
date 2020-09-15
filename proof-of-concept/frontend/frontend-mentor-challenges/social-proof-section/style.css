@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap');
+
+*,
+h1,
+h3,
+h4 {
+  margin: 0;
+  padding: 0;
+}
+
+.content {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(./images/bg-pattern-top-desktop.svg),
+    url(./images/bg-pattern-bottom-desktop.svg);
+  background-position: top left, bottom right;
+  background-repeat: no-repeat;
+  background-color: hsl(0, 0%, 100%);
+  font-family: 'Spartan', sans-serif;
+}
+
+@media only screen and (max-width: 767px) {
+  .content {
+    background-image: url(./images/bg-pattern-top-mobile.svg),
+      url(./images/bg-pattern-bottom-mobile.svg);
+    background-size: 100vw;
+  }
+}
+
+.top {
+  width: 80vw;
+  height: 55vh;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.description {
+  width: 500px;
+}
+
+.description h1 {
+  font-size: 3em;
+  font-weight: 700;
+  color: hsl(300, 43%, 22%);
+}
+
+.description h3 {
+  margin-top: 15px;
+  font-size: 1em;
+  font-weight: 400;
+}
+
+.reviewers {
+  width: 550px;
+  height: 25vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.review-box {
+  width: 80%;
+  height: 55px;
+  background-color: hsl(300, 24%, 96%);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.review1 {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.review2 {
+  display: flex;
+  justify-content: center;
+}
+
+.review3 {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.review-box {
+  display: flex;
+}
+
+.review-box h3 {
+  margin-left: 25px;
+  font-size: 0.8em;
+  font-weight: 700;
+  color: hsl(300, 43%, 22%);
+}
+
+.review-star {
+  width: 25px;
+  height: 25px;
+  background-image: url(./images/icon-star.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.testimonials {
+  width: 80vw;
+  height: 45vh;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.testimonial-box {
+  width: 25vw;
+  height: 300px;
+  background-color: hsl(300, 43%, 22%);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.info {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+}
+
+.info img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
