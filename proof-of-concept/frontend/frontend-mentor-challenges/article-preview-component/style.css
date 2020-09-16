@@ -185,7 +185,7 @@ body {
     width: 90vw;
     height: 90px;
     margin-left: 5%;
-    bottom: 5%;
+    bottom: 10vh;
     left: 0;
     position: absolute;
   }

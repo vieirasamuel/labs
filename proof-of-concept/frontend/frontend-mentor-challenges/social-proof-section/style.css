@@ -11,6 +11,7 @@ h4 {
 .content {
   width: 100vw;
   height: 100vh;
+  margin: 0 auto;
   background-image: url(./images/bg-pattern-top-desktop.svg),
     url(./images/bg-pattern-bottom-desktop.svg);
   background-position: top left, bottom right;
@@ -112,22 +113,68 @@ h4 {
   justify-content: space-between;
 }
 
+.box1 {
+  margin-top: 0;
+}
+
+.box2 {
+  margin-top: 20px;
+}
+
+.box3 {
+  margin-top: 40px;
+}
+
 .testimonial-box {
   width: 25vw;
-  height: 300px;
+  height: 240px;
   background-color: hsl(300, 43%, 22%);
   border-radius: 10px;
-  overflow: hidden;
+  display: flex;
+  align-items: center;
 }
 
 .info {
   width: 80%;
   margin: 0 auto;
-  display: flex;
 }
 
 .info img {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
+  margin-right: 20px;
   border-radius: 50%;
+}
+
+.info h4 {
+  font-size: 0.8em;
+}
+
+.customer {
+  width: inherit;
+  display: flex;
+  margin-bottom: 35px;
+}
+
+.name-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 1.2em;
+}
+
+.name {
+  font-weight: 700;
+  color: hsl(0, 0%, 100%);
+}
+
+.buyer {
+  font-weight: 500;
+  color: hsl(333, 80%, 67%);
+}
+
+.text {
+  font-weight: 500;
+  line-height: 1.7em;
+  color: hsl(0, 0%, 100%);
 }
