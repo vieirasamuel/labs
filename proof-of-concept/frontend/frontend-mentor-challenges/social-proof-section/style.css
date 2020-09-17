@@ -22,6 +22,7 @@ h4 {
 
 @media only screen and (max-width: 767px) {
   .content {
+    height: auto;
     background-image: url(./images/bg-pattern-top-mobile.svg),
       url(./images/bg-pattern-bottom-mobile.svg);
     background-size: 100vw;
@@ -37,8 +38,22 @@ h4 {
   align-items: center;
 }
 
+@media only screen and (max-width: 767px) {
+  .top {
+    height: auto;
+    padding-top: 80px;
+    flex-direction: column;
+  }
+}
+
 .description {
   width: 500px;
+}
+
+@media only screen and (max-width: 767px) {
+  .description {
+    width: inherit;
+  }
 }
 
 .description h1 {
@@ -47,11 +62,25 @@ h4 {
   color: hsl(300, 43%, 22%);
 }
 
+@media only screen and (max-width: 767px) {
+  .description h1 {
+    font-size: 2.3em;
+    text-align: center;
+  }
+}
+
 .description h3 {
   margin-top: 15px;
   font-size: 1em;
   font-weight: 400;
   line-height: 1.7em;
+}
+
+@media only screen and (max-width: 767px) {
+  .description h3 {
+    margin-top: 30px;
+    text-align: center;
+  }
 }
 
 .reviewers {
@@ -62,6 +91,14 @@ h4 {
   justify-content: space-around;
 }
 
+@media only screen and (max-width: 767px) {
+  .reviewers {
+    width: inherit;
+    height: 300px;
+    margin-top: 30px;
+  }
+}
+
 .review-box {
   width: 80%;
   height: 55px;
@@ -70,6 +107,31 @@ h4 {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+@media only screen and (max-width: 767px) {
+  .review-box {
+    width: inherit;
+    height: 80px;
+    flex-direction: column;
+  }
+}
+
+.review-box h3 {
+  margin-left: 25px;
+  font-size: 0.8em;
+  font-weight: 700;
+  color: hsl(300, 43%, 22%);
+}
+
+.stars {
+  display: flex;
+}
+
+@media only screen and (max-width: 767px) {
+  .stars {
+    margin-bottom: 10px;
+  }
 }
 
 .review1 {
@@ -87,15 +149,12 @@ h4 {
   justify-content: flex-end;
 }
 
-.review-box {
-  display: flex;
-}
-
-.review-box h3 {
-  margin-left: 25px;
-  font-size: 0.8em;
-  font-weight: 700;
-  color: hsl(300, 43%, 22%);
+@media only screen and (max-width: 767px) {
+  .review1,
+  .review2,
+  .review3 {
+    display: block;
+  }
 }
 
 .review-star {
@@ -114,6 +173,15 @@ h4 {
   justify-content: space-between;
 }
 
+@media only screen and (max-width: 767px) {
+  .testimonials {
+    height: auto;
+    margin-top: 40px;
+    display: block;
+    justify-content: center;
+  }
+}
+
 .box1 {
   margin-top: 0;
 }
@@ -126,6 +194,17 @@ h4 {
   margin-top: 40px;
 }
 
+@media only screen and (max-width: 767px) {
+  .box1 {
+    margin-top: 0;
+  }
+
+  .box3 {
+    margin-top: 20px;
+    margin-bottom: 80px;
+  }
+}
+
 .testimonial-box {
   width: 25vw;
   height: 240px;
@@ -133,6 +212,12 @@ h4 {
   border-radius: 10px;
   display: flex;
   align-items: center;
+}
+
+@media only screen and (max-width: 767px) {
+  .testimonial-box {
+    width: inherit;
+  }
 }
 
 .info {
