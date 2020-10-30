@@ -1,20 +1,20 @@
 require('dotenv/config');
-const { verify } = require('jsonwebtoken');
+const jwt = require('jsonwebtoken');
 const { hash, compare } = require('bcryptjs');
+const { v4: uuidv4 } = require('uuid');
 
 const User = require('../models/User');
-const { get } = require('../routes/user.routes');
-const { create } = require('../models/User');
 
 module.exports = {
   async index(req, res) {
-    const users = await User.findAll({ attributes: ['name', 'email'] });
+    const users = await User.findAll({ attributes: ['uuid', 'name', 'email'] });
     return res.json(users);
   },
   async store(req, res) {
     const { name, email, password } = req.body;
     const pepperedPassword = password + process.env.PEPPER;
     const hashedPassword = await hash(pepperedPassword, 10);
+    const uuid = uuidv4();
     const [user, created] = await User.findOrCreate({
       attributes: {
         name,
@@ -22,6 +22,7 @@ module.exports = {
       },
       where: { email },
       defaults: {
+        uuid,
         name,
         password: hashedPassword,
       },
@@ -34,12 +35,24 @@ module.exports = {
   async get(req, res) {
     const { email } = req.body;
     const user = await User.findOne({
-      attributes: ['name', 'email'],
+      attributes: ['uuid', 'name', 'email'],
       where: { email },
     });
     if (user) {
       return res.json(user);
     }
     return res.json('User not find.');
+  },
+  async auth(req, res) {
+    const { email, password } = req.body;
+    const user = await User.findOne({
+      attributes: ['uuid', 'name', 'email', 'password'],
+      where: { email },
+    });
+    const result = await compare(password + process.env.PEPPER, user.password);
+    if (result) {
+      return res.json('User authenticated.');
+    }
+    return res.json('Wrong password.');
   },
 };
