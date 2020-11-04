@@ -1,7 +1,7 @@
 require('dotenv/config');
-const jwt = require('jsonwebtoken');
 const { hash, compare } = require('bcryptjs');
 const { v4: uuidv4 } = require('uuid');
+const jwt = require('../middlewares/jwt');
 
 const User = require('../models/User');
 
@@ -45,14 +45,28 @@ module.exports = {
   },
   async auth(req, res) {
     const { email, password } = req.body;
-    const user = await User.findOne({
-      attributes: ['uuid', 'name', 'email', 'password'],
-      where: { email },
-    });
-    const result = await compare(password + process.env.PEPPER, user.password);
-    if (result) {
-      return res.json('User authenticated.');
+    const verify = jwt.verify(req);
+    if (typeof verify === 'undefined') {
+      try {
+        const user = await User.findOne({
+          attributes: ['uuid', 'name', 'email', 'password'],
+          where: { email },
+        });
+        const truePassword = await compare(
+          password + process.env.PEPPER,
+          user.password
+        );
+        if (!truePassword) {
+          return res.status(401).json('Invalid Password');
+        }
+        user.password = undefined;
+        const token = jwt.auth(user);
+        return res.json({ user, token });
+      } catch (err) {
+        res.status(400).json({ message: 'User not Find' });
+        return;
+      }
     }
-    return res.json('Wrong password.');
+    return res.status(200).json('User is already authenticated.');
   },
 };
