@@ -2,14 +2,15 @@ const express = require('express');
 const router = express.Router();
 
 const userController = require('../controllers/userController');
+const jwt = require('../middlewares/jwt');
 
 router.get('/', (req, res) => {
   res.send('Hello World User!');
 });
 
-router.route('/register').post(userController.store);
-router.route('/list').get(userController.index);
-router.route('/get').get(userController.get);
-router.route('/auth').post(userController.auth);
+router.post('/register', userController.store);
+router.get('/list', jwt.verify, userController.index);
+router.get('/get', jwt.verify, userController.get);
+router.post('/auth', userController.auth);
 
 module.exports = router;
