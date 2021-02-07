@@ -4,9 +4,13 @@
 
 ## Table of Content
 
-[1. How to Setup](#how-to-setup)
-[2. Enviroment Variables](#enviroment-variables)
-[3. Endpoints](#endpoints)
+  - [1. How to Setup](#how-to-setup)
+  - [2. Enviroment Variables](#enviroment-variables)
+  - [3. Endpoints](#endpoints)
+    - [3.1. Register](#register)
+    - [3.2. Auth](#auth)
+    - [3.3. Get](#get)
+    - [3.4. List](#list)
   
 ## How to Setup
 
