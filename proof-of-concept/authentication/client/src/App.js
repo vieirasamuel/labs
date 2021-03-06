@@ -14,7 +14,7 @@ function App() {
       <Input type="password" label="Password" />
       <Button text="Login" />
       <p>
-        Don't have an account? <a href="#">Create Account.</a>
+        Don't have an account? <a href="#">Create Account</a>.
       </p>
     </div>
   );

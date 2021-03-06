@@ -6,7 +6,7 @@
 
 :root {
   --background: #fff;
-  --text: #000;
+  --text: #333333;
   --link: #dd0426;
   --button: #dd0426;
   --button-text: #fff;
@@ -57,7 +57,7 @@ body {
   padding: 10px;
   font-size: 1rem;
   border: 1px solid #cdcbcb;
-  border-radius: 10px;
+  border-radius: 7px;
   box-shadow: none;
 }
 
@@ -68,16 +68,17 @@ body {
 }
 
 .container button {
-  width: 12rem;
-  height: 2.5rem;
+  padding: 1rem 2.5rem;
   margin-top: 25px;
-  border: none;
-  border-radius: 10px;
+  border: 1px solid var(--button);
+  border-radius: 7px;
   font-size: 1rem;
   font-weight: 700;
+  letter-spacing: 0.05rem;
   background: var(--button);
   color: var(--button-text);
   cursor: pointer;
+  transition: all 0.5s;
 }
 
 .container button:hover {
@@ -93,6 +94,10 @@ body {
 .container a {
   color: var(--link);
   text-decoration: none;
+}
+
+.container a:hover {
+  text-decoration: underline;
 }
 
 .container a:visited {
