@@ -4,6 +4,7 @@ import Input from '../components/Input';
 import { Link } from 'react-router-dom';
 
 function Login() {
+  function handleSubmit() {}
   return (
     <div class="container">
       <h1 class="title-spacing">
@@ -11,7 +12,7 @@ function Login() {
       </h1>
       <Input type="email" label="E-mail" />
       <Input type="password" label="Password" />
-      <Button text="Login" />
+      <Button label="Login" handleClick={handleSubmit} />
       <p>
         Don't have an account? <Link to="/register">Create Account</Link>.
       </p>

@@ -4,6 +4,7 @@ import Button from '../components/Button';
 import { Link } from 'react-router-dom';
 
 function Register() {
+  function handleRegister() {}
   return (
     <div class="container">
       <h1>Create Account</h1>
@@ -13,7 +14,7 @@ function Register() {
       <Input type="name" label="Name" />
       <Input type="email" label="E-mail" />
       <Input type="password" label="Password" />
-      <Button text="Sign Up" />
+      <Button label="Sign Up" handleClick={handleRegister} />
     </div>
   );
 }
