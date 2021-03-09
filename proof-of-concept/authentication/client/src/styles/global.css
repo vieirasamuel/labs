@@ -5,7 +5,7 @@
 }
 
 :root {
-  --background: #fff;
+  --background: #f2f3f5;
   --text: #333333;
   --link: #dd0426;
   --button: #dd0426;
@@ -32,8 +32,8 @@ body {
 }
 
 .container {
-  width: 25rem;
-  height: 80vh;
+  width: 26.25rem;
+  height: 100vh;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -42,20 +42,20 @@ body {
 }
 
 .container h1 {
-  margin-bottom: 1.8rem;
-  font-size: 2.5rem;
-  font-weight: 700;
+  font-size: 3.583rem;
+  line-height: 4rem;
+  font-weight: 400;
 }
 
 .container h1 > span {
-  font-weight: 300;
+  font-weight: 700;
 }
 
 .container input {
-  width: 25rem;
+  width: 26.25rem;
   height: 3rem;
   padding: 10px;
-  font-size: 1rem;
+  font-size: 1.2rem;
   border: 1px solid #cdcbcb;
   border-radius: 8px;
   box-shadow: none;
@@ -65,15 +65,17 @@ body {
   align-self: flex-start;
   margin-top: 1rem;
   font-weight: 700;
+  line-height: 1.5rem;
 }
 
 .container button {
-  padding: 1rem 4rem;
+  width: 12.5rem;
+  height: 3rem;
   margin-top: 1rem;
   border: 1px solid var(--button);
   border-radius: 8px;
-  font-size: 1rem;
-  font-weight: 700;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
   letter-spacing: 0.05rem;
   background: var(--button);
   color: var(--button-text);
@@ -85,10 +87,13 @@ body {
   background: var(--button-text);
   color: var(--button);
   border: 1px solid var(--button);
+  box-shadow: 0px 8px 24px 0px rgb(221, 4, 38, 0.45);
 }
 
 .container p {
   margin-top: 1rem;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
 }
 
 .container a {
@@ -102,4 +107,8 @@ body {
 
 .container a:visited {
   color: var(--link);
+}
+
+.title-spacing {
+  margin-bottom: 3rem;
 }

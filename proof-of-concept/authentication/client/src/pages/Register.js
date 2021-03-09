@@ -7,7 +7,7 @@ function Register() {
   return (
     <div class="container">
       <h1>Create Account</h1>
-      <p>
+      <p class="title-spacing">
         Already have an account? <Link to="/">Sign In</Link>.
       </p>
       <Input type="name" label="Name" />

@@ -6,8 +6,8 @@ import { Link } from 'react-router-dom';
 function Login() {
   return (
     <div class="container">
-      <h1>
-        JWT <span>AUTH</span>
+      <h1 class="title-spacing">
+        <span>JWT</span> AUTH
       </h1>
       <Input type="email" label="E-mail" />
       <Input type="password" label="Password" />
