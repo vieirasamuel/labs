@@ -9,7 +9,7 @@
   --text: #333333;
   --link: #dd0426;
   --button: #dd0426;
-  --button-text: #fff;
+  --button-text: #f2f3f5;
 }
 
 @media (max-width: 1080px) {
@@ -72,7 +72,7 @@ body {
   width: 12.5rem;
   height: 3rem;
   margin-top: 1rem;
-  border: 1px solid var(--button);
+  border: 2px solid var(--button);
   border-radius: 8px;
   font-size: 1.2rem;
   line-height: 1.5rem;
@@ -86,7 +86,7 @@ body {
 .container button:hover {
   background: var(--button-text);
   color: var(--button);
-  border: 1px solid var(--button);
+  border: 2px solid var(--button);
   box-shadow: 0px 8px 24px 0px rgb(221, 4, 38, 0.45);
 }
 
