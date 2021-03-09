@@ -112,3 +112,25 @@ body {
 .title-spacing {
   margin-bottom: 3rem;
 }
+
+.success-icon {
+  width: 8rem;
+  height: 8rem;
+  margin-bottom: 1rem;
+}
+
+.success {
+  width: 50vw;
+}
+
+.user-info {
+  margin-top: 3.875rem;
+  margin-bottom: 3.875rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.user-info span {
+  font-weight: 700;
+}
