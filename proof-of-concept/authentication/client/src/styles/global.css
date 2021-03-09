@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --background: #f2f3f5;
+  --text: #333333;
+  --link: #dd0426;
+  --button: #dd0426;
+  --button-text: #f2f3f5;
+}
+
+@media (max-width: 1080px) {
+  html {
+    font-size: 93.75%;
+  }
+}
+
+@media (max-width: 720px) {
+  html {
+    font-size: 87.5%;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--text);
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
+
+.container {
+  width: 26.25rem;
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container h1 {
+  font-size: 3.583rem;
+  line-height: 4rem;
+  font-weight: 400;
+}
+
+.container h1 > span {
+  font-weight: 700;
+}
+
+.container input {
+  width: 26.25rem;
+  height: 3rem;
+  padding: 10px;
+  font-size: 1.2rem;
+  border: 1px solid #cdcbcb;
+  border-radius: 8px;
+  box-shadow: none;
+}
+
+.container label {
+  align-self: flex-start;
+  margin-top: 1rem;
+  font-weight: 700;
+  line-height: 1.5rem;
+}
+
+.container button {
+  width: 12.5rem;
+  height: 3rem;
+  margin-top: 1rem;
+  border: 2px solid var(--button);
+  border-radius: 8px;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.05rem;
+  background: var(--button);
+  color: var(--button-text);
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.container button:hover {
+  background: var(--button-text);
+  color: var(--button);
+  border: 2px solid var(--button);
+  box-shadow: 0px 8px 24px 0px rgb(221, 4, 38, 0.45);
+}
+
+.container p {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+}
+
+.container a {
+  color: var(--link);
+  text-decoration: none;
+}
+
+.container a:hover {
+  text-decoration: underline;
+}
+
+.container a:visited {
+  color: var(--link);
+}
+
+.title-spacing {
+  margin-bottom: 3rem;
+}
+
+.success-icon {
+  width: 8rem;
+  height: 8rem;
+  margin-bottom: 1rem;
+}
+
+.success {
+  width: 50vw;
+}
+
+.user-info {
+  margin-top: 3.875rem;
+  margin-bottom: 3.875rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.user-info span {
+  font-weight: 700;
+}
