@@ -15,15 +15,15 @@ function RegisterSuccess() {
       <div class="user-info">
         <p>
           Name: <br />
-          <span>Samuel Santos Vieira</span>
+          <span>My Name</span>
         </p>
         <p>
           E-mail: <br />
-          <span>samuelsantos1996@hotmail.com</span>
+          <span>hello@email.com</span>
         </p>
         <p>
           UUID: <br />
-          <span>153aedb0-9208-4bb5-ba88-e67a14b70663</span>
+          <span>My UUID</span>
         </p>
       </div>
       <Button label="Sign In" handleClick={handleRedirect} />
