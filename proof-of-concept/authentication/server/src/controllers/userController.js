@@ -30,7 +30,7 @@ async function store(req, res) {
   if (created) {
     return res.status(201).json(user);
   }
-  return res.json('User already exists.');
+  return res.status(400).json('User already exists.');
 }
 
 async function get(req, res) {
