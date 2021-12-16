@@ -18,11 +18,15 @@ function auth(user) {
 function verify(req, res, next) {
   let validation;
   try {
-    const token = req.headers['x-access-token'];
-    if (!token) {
+    const authorization = req.headers.authorization.split(' ');
+    if (authorization && authorization[0] === 'Bearer') {
+      validation = jwt.verify(
+        authorization[1],
+        process.env.ACCESS_TOKEN_SECRET
+      );
+    } else {
       res.status(401).json({ message: 'Invalid Token' });
     }
-    validation = jwt.verify(token, process.env.ACCESS_TOKEN_SECRET);
   } catch (err) {
     return res.status(500).json({ err });
   }
