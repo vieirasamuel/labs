@@ -27,7 +27,10 @@ function Register() {
         console.log(login);
         if (login.status === 201) {
           setError(false);
-          history.push('register-success');
+          history.push({
+            pathname: 'register-success',
+            state: login.data,
+          });
         }
       }
     } catch (e) {
