@@ -8,6 +8,9 @@ function RegisterSuccess() {
   const handleRedirect = () => {
     history.replace('/');
   };
+
+  const { name, email, uuid } = history.location.state;
+
   return (
     <div class="container success">
       <img class="success-icon" src="/icons/success.svg" alt="Success Icon" />
@@ -15,15 +18,15 @@ function RegisterSuccess() {
       <div class="user-info">
         <p>
           Name: <br />
-          <span>My Name</span>
+          <span>{name}</span>
         </p>
         <p>
           E-mail: <br />
-          <span>hello@email.com</span>
+          <span>{email}</span>
         </p>
         <p>
           UUID: <br />
-          <span>My UUID</span>
+          <span>{uuid}</span>
         </p>
       </div>
       <Button label="Sign In" handleClick={handleRedirect} />
