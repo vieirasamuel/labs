@@ -24,7 +24,6 @@ function Register() {
         }).then((response) => {
           return response;
         });
-        console.log(login);
         if (login.status === 201) {
           setError(false);
           history.push({
