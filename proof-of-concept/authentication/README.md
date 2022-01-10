@@ -113,7 +113,7 @@ Retorna a busca por um usuário no sistema.
 }
 ```
 
-O Header precisa conter o **x-access-token** fornecido ao autenticar no sistema utilizando o Endpoint **Auth**.
+O Header precisa conter o **Bearer Token** fornecido ao autenticar no sistema utilizando o Endpoint **Auth**.
 
 ### List
 
@@ -121,4 +121,4 @@ Retorna todos os usuários no sistema.
 
 **GET** `http://localhost:4000/users/list`
 
-O Header precisa conter o **x-access-token** fornecido ao autenticar no sistema utilizando o Endpoint **Auth**.
+O Header precisa conter o **Bearer Token** fornecido ao autenticar no sistema utilizando o Endpoint **Auth**.
